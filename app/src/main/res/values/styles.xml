@@ -1,0 +1,38 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="heading1">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">casual</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+    <style name="matter">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:text">@string/have_a_omlet</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+</resources>
