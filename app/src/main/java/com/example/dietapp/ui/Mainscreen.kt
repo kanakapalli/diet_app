@@ -2,6 +2,7 @@ package com.example.dietapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
@@ -11,6 +12,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.dietapp.R
 import com.example.dietapp.viewModel.Mainscreen_viewModel
 import kotlinx.android.synthetic.main.activity_mainscreen.*
+import org.json.JSONArray
+import java.io.IOException
+import java.io.InputStream
+import kotlin.random.Random
 
 class Mainscreen : AppCompatActivity() {
 
@@ -21,13 +26,23 @@ class Mainscreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mainscreen)
 
+        read_json()
+
         viewModel = ViewModelProvider(this).get(Mainscreen_viewModel::class.java)
 
+
         viewModel.breakfast_data.observe(this, Observer {
-          it.breakfast_calories
-          it.breakfast_details
+            breakfasr_tv.text = viewModel.breakfast_data.value?.getString("breakfast_item").toString()
 
         })
+
+        breakfasr_tv.text = viewModel.breakfast_data.value?.getString("breakfast_item").toString()
+
+
+
+
+
+
 
 
         button2.setOnClickListener {
@@ -51,6 +66,21 @@ class Mainscreen : AppCompatActivity() {
         }
 
 
+    }
+
+    fun read_json(){
+        try{
+            val inputscrem : InputStream = application.assets.open("breakfast.json")
+            var jsonfile = inputscrem.bufferedReader().use{it.readText()}
+            var jsonData = JSONArray(jsonfile)
+
+            var break_data = jsonData.getJSONObject(Random.nextInt(0, 6))
+            breakfasr_tv.text = jsonfile.toString()
+            breakfasr_tv.text = "sdfgsdfgasdfsdfsd hfdg hfdgh fghgh dfgh dfgh "
+
+        }catch (e: IOException){
+
+        }
     }
 
     private fun test(view: LinearLayout?) {
