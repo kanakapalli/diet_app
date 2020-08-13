@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimary">#4DBDEB</color>
+    <color name="colorPrimaryDark">#4DBDEB</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="blue_superman">#4DBDEB</color>
+    <color name="nav_background">#DDA03B</color>
     <color name="black">#090909</color>
     <color name="cardviewBackground">#AEAEAE</color>
+    <color name="adaptor">#FFD1D1D1</color>
     <color name="white">#FFFFFF</color>
+    <color name="batman_bg">#FBCA01</color>
+    <color name="spiderman_bg">#D5212A</color>
 </resources>

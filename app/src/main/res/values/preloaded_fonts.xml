@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
-        <item>@font/advent_pro_thin</item>
-        <item>@font/andika</item>
+        <item>@font/actor</item>
+        <item>@font/arimo_bold</item>
+        <item>@font/comfortaa_bold</item>
+        <item>@font/didact_gothic</item>
+        <item>@font/dosis_semibold</item>
     </array>
 </resources>

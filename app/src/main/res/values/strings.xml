@@ -1,5 +1,20 @@
 <resources>
-    <string name="app_name">diet app</string>
+    <string name="app_name">Lose Quarantine Fat</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Login </string>
+    <string name="nav_header_subtitle">To save your data</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Logout</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Tips</string>
+    <string name="menu_slideshow">BMI calculator</string>
+    <string name="menu_aboutus">About us</string>
+
+    <string name="login_superman_img">superman is also</string>
+
+
     <string name="have_a_omlet">have a omlet</string>
     <string name="breakfast">breakfast</string>
     <string name="lunch">lunch</string>
@@ -7,6 +22,12 @@
     <string name="dinner">dinner</string>
     <string name="view_derails">view derails</string>
     <string name="passage">a;sdjklfhas djhfaosjdhf asjkhdf lakjsdhf lajksdhf laksjdfhlaksjdhfalksjdfhlaksjdfhaksdjfhalskdjhflaksjdhfalkjsdhf lakjsdhf alksjdhf laksjfdhlaksjdfhakls;jdhf lakjsdfj asdlkjf aljksdhf lkajshdfkjasdhfklajsdhflaksjdhf laksjdhf lkajsdhf laksjdhfkjahsdflkjashdflk jdhflkajs android:text=a;sdjklfhas djhfaosjdhf asjkhdf lakjsdhf lajksdhf laksjdfhlaksjdhfalksjdfhlaksjdfhaksdjfhalskdjhflaksjdhfalkjsdhf lakjsdhf alksjdhf laksjfdhlaksjdfhakls;jdhf lakjsdfj asdlkjf aljksdhf lkajshdfkjasdhfklajsdhflaksjdhf laksjdhf lkajsdhf laksjdhfkjahsdflkjashdflk jdhflkajshfliksdj hfkajsdhfgaouiweytgaeuhgiafhgdsgfh a</string>
+    <string name="know_your_bmi">KNOW YOUR BMI</string>
+    <string name="healthy_bmi_18_5_kg_m_25_kg_m">Healthy BMI: 18.5 kg/m²-25 kg/m²</string>
+    <string name="check_your_bmi">Check your BMI</string>
+    <string name="passage2">Create design your logo for free using an easy logo maker tool. Click on the design you like and start making a logo with our diy logo maker. Logogarden also offers professional logo design services for those who prefer to work with a graphic designer. Use our online logo creator in order to create hundreds of unique logos instantly no technical skills are required. The free logo maker. Tailor brands logo maker is trusted by over 1 million small businesses.</string>
+    <string name="healthy_tips">Healthy Tips</string>
+    <string name="diet_workout_yoga">Diet . workout . yoga</string>
 
-    <string name="a_sdjklfhas_djhfaosjdhf_asjkhdf_lakjsdhf_lajksdhf_laksjdfhlaksjdhfalksjdfhlaksjdfhaksdjfhalskdjhflaksjdhfalkjsdhf_lakjsdhf_alksjdhf_laksjfdhlaksjdfhakls_jdhf_lakjsdfj_asdlkjf_aljksdhf_lkajshdfkjasdhfklajsdhflaksjdhf_laksjdhf_lkajsdhf_laksjdhfkjahsdflkjashdflk_jdhflkajs_android_text_a_sdjklfhas_djhfaosjdhf_asjkhdf_lakjsdhf_lajksdhf_laksjdfhlaksjdhfalksjdfhlaksjdfhaksdjfhalskdjhflaksjdhfalkjsdhf_lakjsdhf_alksjdhf_laksjfdhlaksjdfhakls_jdhf_lakjsdfj_asdlkjf_aljksdhf_lkajshdfkjasdhfklajsdhflaksjdhf_laksjdhf_lkajsdhf_laksjdhfkjahsdflkjashdflk_jdhflkajshfliksdj_hfkajsdhfgaouiweytgaeuhgiafhgdsgfh_a">a;sdjklfhas djhfaosjdhf asjkhdf lakjsdhf lajksdhf laksjdfhlaksjdhfalksjdfhlaksjdfhaksdjfhalskdjhflaksjdhfalkjsdhf lakjsdhf alksjdhf laksjfdhlaksjdfhakls;jdhf lakjsdfj asdlkjf aljksdhf lkajshdfkjasdhfklajsdhflaksjdhf laksjdhf lkajsdhf laksjdhfkjahsdflkjashdflk jdhflkajs android:text=a;sdjklfhas djhfaosjdhf asjkhdf lakjsdhf lajksdhf laksjdfhlaksjdhfalksjdfhlaksjdfhaksdjfhalskdjhflaksjdhfalkjsdhf lakjsdhf alksjdhf laksjfdhlaksjdfhakls;jdhf lakjsdfj asdlkjf aljksdhf lkajshdfkjasdhfklajsdhflaksjdhf laksjdhf lkajsdhf laksjdhfkjahsdflkjashdflk jdhflkajshfliksdj hfkajsdhfgaouiweytgaeuhgiafhgdsgfh a</string>
+
 </resources>

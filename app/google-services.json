@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "874366346936",
+    "firebase_url": "https://qfat-115a3.firebaseio.com",
+    "project_id": "qfat-115a3",
+    "storage_bucket": "qfat-115a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874366346936:android:870fdee936bcc93b7ff64d",
+        "android_client_info": {
+          "package_name": "com.anurag.losequarantinefat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874366346936-angje7tlupd9mdfqu31k1luoklgrklkr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anurag.losequarantinefat",
+            "certificate_hash": "e16640002e66eab1f5cc400ec70b6b472fc23474"
+          }
+        },
+        {
+          "client_id": "874366346936-44fgo8h7lqujrqqhs0itf004plt1jdkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8HyvX8JvOMOQYRE-bkmvvI0ocJBjSa90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874366346936-44fgo8h7lqujrqqhs0itf004plt1jdkg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
