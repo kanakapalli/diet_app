@@ -1,77 +1,107 @@
 [
   {
-    "_id": "5f3549f5f0dfaa164a6ef9a4",
-    "title": "Elba Baldwin - female-21?",
-    "subject": "724 Woodpoint Road, Lumberton, New Hampshire, 8482-elbabaldwin@helixo.com"
+    "_id": "1",
+    "title": "27 Health and Nutrition Tips That Are Actually Evidence-Based",
+    "subject": "It’s easy to get confused when it comes to health and nutrition.\nEven qualified experts often seem to hold opposing opinions. \nYet, despite all the disagreements, a number of wellness tips are well supported by research.\nHere are 27 health and nutrition tips that are actually based on good science...",
+    "link":"https://www.healthline.com/nutrition/27-health-and-nutrition-tips",
+    "img_URL":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTiyphysG4uZq8vbozonOvnJgi9cbEZ3eptkA&usqp=CAU"
   },
   {
-    "_id": "5f3549f55a9379213af19942",
-    "title": "Ward Mcconnell - male-25?",
-    "subject": "578 Gardner Avenue, Nanafalia, Rhode Island, 4434-wardmcconnell@helixo.com"
+    "_id": "2",
+    "title": "Women's Health Tips for Heart, Mind, and Body",
+    "subject": "Looking for the path toward a healthier you? It's not hard to find. The journey begins with some simple tweaks to your lifestyle. The right diet, exercise, and stress-relief plan all play a big role.",
+    "link":"https://www.webmd.com/balance/features/health-tips-heart-mind-body#1",
+    "img_URL":"https://4.bp.blogspot.com/-EPFOYMTjQdc/WOSiXzJyOVI/AAAAAAAAAnU/ZuhEk9-rZhAxETsCP1d-GhnepagW1BeDgCLcB/s1600/womens-health-logo.gif"
   },
   {
-    "_id": "5f3549f5c5b1aaa9861250f3",
-    "title": "Charlotte Castro - female-21?",
-    "subject": "588 Carroll Street, Sutton, West Virginia, 3524-charlottecastro@helixo.com"
+    "_id": "3",
+    "title": "15 Foods That Reduce Your Heart Attack Risk According to Doctors",
+    "subject": "Do you want to clean your blood vessels? How to decrease the risk of heart attacks in the future? Are you ready to improve your overall well-being? Here are 15 food products that can take care of your heart and prevent heart diseases.  ",
+    "link":"https://www.youtube.com/watch?v=TKyY5zhrlfQ",
+    "img_URL":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-Iq5LTePwv6DD5KL6OM8ONWrNgW-X2OYkSg&usqp=CAU"
+  },
+
+  {
+    "_id": "4",
+    "title": "9 Quarantine Mistakes that Make You Gain Weight",
+    "subject": "In the grand scheme of things, putting on a few pounds during this COVID-19 pandemic should be the least of your concerns. As long as you're safe at home, staying healthy, and doing everything you can to prevent the spread of the virus, that's all that matters.",
+    "link":"https://www.eatthis.com/gaining-weight-during-quarantine/",
+    "img_URL":"https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/community/need_to_gain_weight_community/650x350_need_to_gain_weight_community.jpg"
   },
   {
-    "_id": "5f3549f5e78629486b26f5e1",
-    "title": "Faith Sloan - female-30?",
-    "subject": "382 Radde Place, Haring, Marshall Islands, 7963-faithsloan@helixo.com"
+    "_id": "5",
+    "title": "Lockdown Challenge: 11 Weight Loss Diet Tips To Follow In Quarantine",
+    "subject": "Weight Loss Diet: Remember the New Year resolution you took to eat healthy and lose weight? Perhaps it's time to do something about it. You could start with small, gradual steps.",
+    "link":"https://food.ndtv.com/weight-loss/lockdown-challenge-11-weight-loss-diet-tips-to-follow-in-quarantine-2204786",
+    "img_URL":"https://c.ndtvimg.com/2020-04/2muka3v_weight-loss_625x300_02_April_20.jpg"
   },
   {
-    "_id": "5f3549f5b1f083c47c7a6e6f",
-    "title": "Georgina Bauer - female-26?",
-    "subject": "896 Schroeders Avenue, Summertown, Michigan, 6368-georginabauer@helixo.com"
+    "_id": "6",
+    "title": "Quarantine workout with Bumrungrad: EP #3 - How to exercise to burn fat and lose weight",
+    "subject": "After a long time practicing social distancing at home, many of us have put on some unwanted weight. One of Bumrungrad’s doctors is here to guide you through a few at-home exercises that can help you burn fat and take control of your weight.",
+    "link":"https://www.youtube.com/watch?v=UQ7nXOSldm8&feature=youtu.be",
+    "img_URL":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ3PfSdzPqNxyv6CzGdEbk8dX6Gny6J0t09pA&usqp=CAU"
+  }, {
+  "_id": "7",
+  "title": "7 health foods you already have in your fridge",
+  "subject": "With more and more types of foods available at markets across the country, it can be overwhelming to figure out just what to eat for optimal health. But healthy eating doesn’t have to be hard — or expensive.",
+  "link":"https://www.today.com/food/top-foods-healthy-body-t116275",
+  "img_URL":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRlJSL25_6kArr1zLVN2iWN6hyT3RrCnQBe2w&usqp=CAU"
+},
+
+  {
+    "_id": "8",
+    "title": "The 18 Best Healthy Foods to Gain Weight Fast",
+    "subject": "For some people, gaining weight or adding muscle can be just as difficult as losing weight for others.\nHowever, simply adding certain foods to your diet can make your weight gain efforts both healthy and more effective.Here are 18 of the best foods to help you gain weight or add muscle, the healthy way...",
+    "link":"https://www.healthline.com/nutrition/18-foods-to-gain-weight",
+    "img_URL":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ_syoDyK4Jf_e12LHrjYlzSa7TTnGRZZm_EA&usqp=CAU"
   },
   {
-    "_id": "5f3549f5a237fe91a671abbf",
-    "title": "Earnestine Koch - female-37?",
-    "subject": "460 Woodrow Court, Trinway, North Carolina, 1950-earnestinekoch@helixo.com"
+    "_id": "9",
+    "title": "The Biggest Fitness Trends Of 2020: From Micro HIIT To Tea Ceremonies At Home",
+    "subject": "Wellness is taking on a whole new meaning right now, especially as we're all confined to much smaller spaces than we're used to.But, fuelled by protein and green juice, the wellness industry is a robust one (it's now worth £21.7bn a year in the UK alone), and it hasn't take long for it to shift a gear and make it easier for everyone to workout at home or in smaller spaces.",
+    "link":"https://www.elle.com/uk/life-and-culture/culture/longform/a41063/fitness-trends-gym-classes-workout/",
+    "img_URL":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT9WpK4j_dcn-giaV_bmrhEQVAWt6_6L4CUaA&usqp=CAU"
   },
   {
-    "_id": "5f3549f5c8711b37a485e89c",
-    "title": "Young Lindsey - male-26?",
-    "subject": "891 Ash Street, Ola, Alaska, 5507-younglindsey@helixo.com"
+    "_id": "10",
+    "title": "15 Foods That Boost the Immune System",
+    "subject": "Feeding your body certain foods may help keep your immune system strong.If you’re looking for ways to prevent colds, the flu, and other infections, your first step should be a visit to your local grocery store. Plan your meals to include these 15 powerful immune system boosters...",
+    "link":"https://www.healthline.com/health/food-nutrition/foods-that-boost-the-immune-system",
+    "img_URL":"https://i.ytimg.com/vi/mYi6wSNvbuI/maxresdefault.jpg"
   },
   {
-    "_id": "5f3549f54c1f12f8f6c9ee46",
-    "title": "Sheppard Mack - male-30?",
-    "subject": "829 Gallatin Place, Deputy, Northern Mariana Islands, 3112-sheppardmack@helixo.com"
+    "_id": "11",
+    "title": "BOOSTING YOUR IMMUNE SYSTEM AGAINST CORONAVIRUS: HOW TO MINIMIZE THE RISK OF INFECTION?",
+    "subject": "Covid – 19 or Coronavirus was declared as a global pandemic by the World Health Organization. And while the countries are grappling with imminent dangers that this virus poses to humanity, there are few key measures that individuals can take to fight this pandemic.",
+    "link":"https://www.narayanahealth.org/blog/boost-immune-system-against-coronavirus-covid-19-infection/",
+    "img_URL":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR8cWqwfKnLHBuk4EKqZqFE68yjh8x-jUnRng&usqp=CAU"
   },
   {
-    "_id": "5f3549f5646751baccb2dfac",
-    "title": "Janell Moore - female-24?",
-    "subject": "650 Columbus Place, Garfield, New Jersey, 6028-janellmoore@helixo.com"
+    "_id": "12",
+    "title": "Coronavirus Outbreak: 5 Foods Items To Boost Your Immunity And Safeguard You From Infections",
+    "subject": "A nutritious diet and an optimally functioning immune system can never go wrong. If you have a healthy immune system, your body can safeguard you from any disease, even the novel coronavirus or COVID-19. While as of now, there is neither any vaccine available nor proven home remedy to protect you from the COVID-19, there are some vitamins and foods which you can inculcate in your diet to have a strong immune system and in turn, fight the infectious disease...",
+    "link":"https://swachhindia.ndtv.com/album-detail/coronavirus-outbreak-5-foods-items-to-boost-your-immunity-and-safeguard-you-from-infections-98969/",
+    "img_URL":"https://resize.indiatvnews.com/en/resize/newbucket/360_-/2020/03/5-1583310789.jpg"
   },
   {
-    "_id": "5f3549f5e61b0102f895409c",
-    "title": "Duke Horn - male-35?",
-    "subject": "249 Lincoln Avenue, Savannah, Oklahoma, 6405-dukehorn@helixo.com"
+    "_id": "13",
+    "title": "Yoga for Everyone",
+    "subject": "It’s time to roll out your yoga mat and discover the combination of physical and mental exercises that for thousands of years have hooked yoga practitioners around the globe. The beauty of yoga is that you don’t have to be a yogi or yogini to reap the benefits. Whether you are young or old, overweight or fit, yoga has the power to calm the mind and strengthen the body. Don’t be intimidated by yoga terminology, fancy yoga studios and complicated poses. Yoga is for everyone.",
+    "link":"https://www.nytimes.com/guides/well/beginner-yoga",
+    "img_URL":"https://static01.nyt.com/images/2016/12/06/well/move/yoga-for-everyone_promo/yoga-for-everyone_promo-jumbo-v4.jpg"
   },
   {
-    "_id": "5f3549f55e4e294a4bceb8d6",
-    "title": "Wilkerson Merrill - male-37?",
-    "subject": "804 Garden Place, Wintersburg, Virginia, 7248-wilkersonmerrill@helixo.com"
-  },
-  {
-    "_id": "5f3549f5816dee9286a15d5a",
-    "title": "Kirsten Bryant - female-28?",
-    "subject": "845 Raleigh Place, Wiscon, Georgia, 8757-kirstenbryant@helixo.com"
-  },
-  {
-    "_id": "5f3549f5836a13d64f76d9b9",
-    "title": "Jan Bowers - female-34?",
-    "subject": "774 Brooklyn Road, Williamson, South Dakota, 7570-janbowers@helixo.com"
-  },
-  {
-    "_id": "5f3549f50def2d161d62d398",
-    "title": "Kristin Sawyer - female-40?",
-    "subject": "994 Hoyts Lane, Tioga, Wisconsin, 8961-kristinsawyer@helixo.com"
-  },
-  {
-    "_id": "5f3549f55eb334a4b44c8591",
-    "title": "Haley Roman - female-30?",
-    "subject": "612 Bedell Lane, Bainbridge, Oregon, 2588-haleyroman@helixo.com"
+    "_id": "14",
+    "title": "57 Amazing Yoga Facts: The History, Benefits, Poses, (Fun!)",
+    "subject": "Statistics about yoga show that it’s growing in popularity every year with more and more money being spent on classes, clothing and equipment. Around the world people are learning the benefits and embracing the practice.",
+    "link":"https://www.thegoodbody.com/yoga-facts/",
+    "img_URL":"https://www.netmarkers.com/wp-content/uploads/2016/06/Trending-facts-about-Yoga-Netmarkers-800x445.jpg"
   }
+
+
+
+
+
+
 ]

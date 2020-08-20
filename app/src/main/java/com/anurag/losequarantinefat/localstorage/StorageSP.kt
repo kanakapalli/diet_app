@@ -10,12 +10,12 @@ class StorageSP(context: Context){
     val Login_data: SharedPreferences  = context.getSharedPreferences("save_loginDATA", Context.MODE_PRIVATE)
 
 
-    fun getDisplayname(): Array<String?> {
+    fun getLoginInfo(): Array<String?> {
         var data = arrayOf<String?>()
         data += Login_data.getString("getDisplayname",null)
         data += Login_data.getString("getGmailadders",null)
         data += Login_data.getString("getPhotoUrl",null)
-        Log.d("reply data", "${data[0]!!}\n${data[1]!!}\n${data[2]!!}\n")
+//        Log.d("reply data", "${data[0]!!}\n${data[1]!!}\n${data[2]!!}\n")
         return data
     }
 
@@ -39,6 +39,18 @@ class StorageSP(context: Context){
         editor.putString("BMI", BMI.toString())
         editor.apply()
         editor.commit()
+    }
+
+
+    fun changeTOFalse(value:Boolean){
+        val editor = Login_data.edit()
+        editor.putBoolean("value", value)
+        editor.apply()
+        editor.commit()
+    }
+    fun getfalse(): Boolean {
+        return Login_data.getBoolean("value",false)
+
     }
 
 

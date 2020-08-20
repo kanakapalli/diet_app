@@ -2,6 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/actor</item>
+        <item>@font/alegreya_sans_medium_italic</item>
         <item>@font/arimo_bold</item>
         <item>@font/comfortaa_bold</item>
         <item>@font/didact_gothic</item>

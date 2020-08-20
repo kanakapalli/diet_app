@@ -37,31 +37,16 @@ class login : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_login)
+        Log.i(TAG,"on create")
+
         auth = Firebase.auth
-
-
-
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
-            .requestEmail()
-            .build()
+        val gso=GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build()
 
         mGoogleSignInClient = GoogleSignIn.getClient(this,gso)
-
         signOut()
-
-        if (!auth.currentUser?.displayName.isNullOrEmpty()){
-            Google_signIn_button.visibility = GONE
-            progressBar.visibility = VISIBLE
-            Handler().postDelayed({
-                startActivity(Intent(this, MainActivity::class.java))
-            },500)
-        }
-
-
         Google_signIn_button.setOnClickListener {
+            Log.i(TAG,"on create")
             Google_signIn_button.visibility = GONE
             progressBar.visibility = VISIBLE
 
@@ -117,6 +102,7 @@ class login : AppCompatActivity() {
             Log.d(TAG,"sign our sucks us")
         }
     }
+
     private fun updateUI(account: FirebaseUser?) {
         val sharedPreferences = StorageSP(this)
         Google_signIn_button.visibility =  VISIBLE
@@ -135,8 +121,6 @@ class login : AppCompatActivity() {
             intent.putExtra("displayName", account.displayName.toString());
             startActivity(intent)
             finish()
-
-
         }else{
             Log.d(TAG,"accounr is null")
         }

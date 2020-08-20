@@ -1,77 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
 
-
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="6dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="casual"
-        android:text="Diet app"
-        android:textColor="@color/black"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:fontFamily="casual"
-        android:text="burn your qurantine fat"
-        android:textColor="@color/black"
-        android:textSize="10dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/text_home"
-        app:layout_constraintTop_toBottomOf="@+id/text_home" />
-
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:mipmap/sym_def_app_icon" />
-
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/ccc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/BMIcard"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0">
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="parent"
+        ads:layout_constraintVertical_bias="0.0">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent">
+            android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.01"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="casual"
+                        android:text="@string/diet_app"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="casual"
+                        android:text="@string/burn_your_qurantine_fat"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+
+                    android:id="@+id/imageView2"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    app:srcCompat="@drawable/ak" />
+            </LinearLayout>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/breakfast_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="25dp"
-                android:background="@drawable/test"
-                android:paddingBottom="25dp"
+                style="@style/cardview_home"
+                app:cardCornerRadius="15dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -117,19 +125,40 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginRight="25dp"
                         android:layout_marginBottom="15dp"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:visibility="gone"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/one">
+                        <TextView
+                            android:id="@+id/breakfasr_cal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="cal asdasdasd"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"/>
+
+                        <ImageView
+                            android:id="@+id/Breakfast_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginBottom="15dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/food" />
 
                         <TextView
                             android:id="@+id/breakfast_matter"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/passage" />
+                        <Button
+                            android:id="@+id/Bcal_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calories Detasils"/>
                     </LinearLayout>
 
 
@@ -138,14 +167,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/lunch_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="25dp"
-                android:background="@drawable/test"
-                android:paddingTop="25dp"
-                android:paddingBottom="25dp"
+                style="@style/cardview_home"
+                app:cardCornerRadius="15dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -190,33 +213,47 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginRight="25dp"
                         android:layout_marginBottom="15dp"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:visibility="gone"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/lunch_iteam">
+                        <TextView
+                            android:id="@+id/Lunch_cal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="cal asdasdasd"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"/>
+                        <ImageView
+                            android:id="@+id/Lunch_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginBottom="15dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/food" />
 
                         <TextView
                             android:id="@+id/lunch_detail_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/passage" />
+                        <Button
+                            android:id="@+id/Lcal_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calories Detasils"/>
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/eveningSnak_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="25dp"
-                android:background="@drawable/test"
-                android:paddingTop="25dp"
-                android:paddingBottom="25dp"
+                style="@style/cardview_home"
+                app:cardCornerRadius="15dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -261,34 +298,48 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginRight="25dp"
                         android:layout_marginBottom="15dp"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:visibility="gone"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/evening_item">
+                        <TextView
+                            android:id="@+id/Snack_cal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="cal asdasdasd"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"/>
+                        <ImageView
+                            android:id="@+id/Snack_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginBottom="15dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/food" />
 
                         <TextView
                             android:id="@+id/evening_detail_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/passage" />
+                        <Button
+                            android:id="@+id/Scal_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calories Detasils"/>
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/dinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/test"
-                android:paddingTop="25dp"
-                android:paddingBottom="25dp"
+                style="@style/cardview_home"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="15dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -336,58 +387,112 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginRight="25dp"
                         android:layout_marginBottom="15dp"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:visibility="gone"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/dinner_item">
+                        <TextView
+                            android:id="@+id/Dinner_cal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="cal asdasdasd"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"/>
+                        <ImageView
+                            android:id="@+id/Dinner_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="8dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/food" />
 
                         <TextView
                             android:id="@+id/dinner_detail_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/passage" />
+                    <Button
+                        android:id="@+id/Dcal_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="calories Detasils"/>
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/BMIcard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="24dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/candidate_card">
-
             <TextView
-                android:id="@+id/BMI_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:gravity="center"
-                android:text="@string/check_your_bmi"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/alegreya_sans_medium_italic"
+                android:text="Fitness demands discipline"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginEnd="15dp"
+                android:text="@string/ravi_anand_veludandi"
+                android:textColor="@color/black" />
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ad_unit_id"
+                app:layout_constraintBottom_toTopOf="@+id/BMIcard"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/BMIcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="24dp"
+                ads:layout_constraintBottom_toBottomOf="@+id/ccc"
+                ads:layout_constraintLeft_toLeftOf="@id/ccc"
+                ads:layout_constraintRight_toRightOf="@id/ccc"
+                ads:layout_constraintTop_toBottomOf="@+id/scrollView2"
+                ads:layout_constraintVertical_bias="1.0"
+                app:cardCornerRadius="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/candidate_card">
+
+                    <TextView
+                        android:id="@+id/BMI_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/check_your_bmi"
+                        android:textColor="@color/black"
+                        ads:layout_constraintEnd_toEndOf="parent"
+                        ads:layout_constraintStart_toStartOf="parent"
+                        ads:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,10 +1,9 @@
 package com.anurag.losequarantinefat
 
+import android.content.ClipData
 import android.content.DialogInterface
-import android.icu.number.NumberFormatter.with
-import android.icu.number.NumberRangeFormatter.with
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageView
@@ -12,56 +11,38 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.app.TaskStackBuilder
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.anurag.losequarantinefat.localstorage.StorageSP
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.messaging.FirebaseMessaging
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.nav_header_main.*
-
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.nav_header_main.view.*
+import com.anurag.losequarantinefat.localstorage.StorageSP as StorageSP
+const val TOPIC = "/topics/Anurag"
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-
     val TAG = "MMMMMMMMMM Mainactivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        FirebaseMessaging.getInstance().subscribeToTopic(TOPIC)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         val save = StorageSP(this)
-        var x = save.getDisplayname()
-//        Log.d(TAG, x[0] as String)
-//        val DisplayName_tv : TextView = findViewById(R.id.DisplayName_tv)
-//        DisplayName_tv.text = x[0]?.let{it as String}
 
-
-//        val bundle = intent.extras
-//        val displayName : String?= bundle!!.getString("displayName")
-//        val photoUrl : String?= bundle.getString("photoUrl")
-//        val email : String?= bundle.getString("email")
-//
-//        Log.i(TAG, email.toString())
-//        Log.i(TAG, photoUrl.toString())
-//        Log.i(TAG, displayName.toString())
-
-
-
-
-//        val DisplayPic : ImageView = findViewById(R.id.DIsplayPic)
-//        val link = photoUrl.toString()
-//        Picasso.get().load("https://image.shutterstock.com/image-photo/beautiful-water-drop-on-dandelion-260nw-789676552.jpg").into(DIsplayPic)
-
-//        EmailAdders_tv.text = email.toString()
+        var x = save.getLoginInfo()
+        verifyuser(x)
 
 
 
@@ -85,9 +66,12 @@ class MainActivity : AppCompatActivity() {
         val EmailAdders_tv = headerView.findViewById(R.id.EmailAdders_tv) as TextView
         val DisplayName_tv = headerView.findViewById(R.id.DisplayName_tv) as TextView
         val DisplayPic = headerView.findViewById(R.id.DIsplayPic) as ImageView
-        EmailAdders_tv.text = "${x[1]}"
-        DisplayName_tv.text = "${x[0]}"
-//      Picasso.get().load("https://image.shutterstock.com/image-photo/beautiful-water-drop-on-dandelion-260nw-789676552.jpg").into(DIsplayPic)
+        if(!x[0].isNullOrEmpty() && !x[1].isNullOrEmpty() && !x[2].isNullOrEmpty()) {
+            EmailAdders_tv.text = "${x[1]}"
+            DisplayName_tv.text = "${x[0]}"
+//        headerView.DIsplayPic.setImageResource(R.drawable.batman)
+        Picasso.get().load("${x[2]}").fit().into(headerView.DIsplayPic)
+        }
 
     }
 
@@ -95,6 +79,21 @@ class MainActivity : AppCompatActivity() {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.LogOut -> {
+                val save = StorageSP(this)
+                var x = save.saveLoginInfo("","","")
+                FirebaseAuth.getInstance().signOut()
+                val intent = Intent(this,
+                    login::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 
@@ -115,5 +114,15 @@ class MainActivity : AppCompatActivity() {
         }
         builder.setNegativeButton("No",{ dialogInterface: DialogInterface, i: Int -> })
         builder.show()
+    }
+    private fun verifyuser(x: Array<String?>) {
+        val uid = FirebaseAuth.getInstance().uid
+
+        if (uid == null || x[0].isNullOrBlank()|| x[1].isNullOrBlank()|| x[2].isNullOrBlank()){
+            val intent = Intent(this,
+                login::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+        }
     }
 }

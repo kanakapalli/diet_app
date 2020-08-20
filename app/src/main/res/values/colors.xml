@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#4DBDEB</color>
     <color name="colorPrimaryDark">#4DBDEB</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorAccent">#4DBDEB</color>
     <color name="blue_superman">#4DBDEB</color>
     <color name="nav_background">#DDA03B</color>
     <color name="black">#090909</color>

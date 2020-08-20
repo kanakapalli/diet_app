@@ -16,10 +16,10 @@
 
 
     <string name="have_a_omlet">have a omlet</string>
-    <string name="breakfast">breakfast</string>
-    <string name="lunch">lunch</string>
-    <string name="eveningsnacks">evening snacks</string>
-    <string name="dinner">dinner</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="eveningsnacks">Evening snacks</string>
+    <string name="dinner">Dinner</string>
     <string name="view_derails">view derails</string>
     <string name="passage">a;sdjklfhas djhfaosjdhf asjkhdf lakjsdhf lajksdhf laksjdfhlaksjdhfalksjdfhlaksjdfhaksdjfhalskdjhflaksjdhfalkjsdhf lakjsdhf alksjdhf laksjfdhlaksjdfhakls;jdhf lakjsdfj asdlkjf aljksdhf lkajshdfkjasdhfklajsdhflaksjdhf laksjdhf lkajsdhf laksjdhfkjahsdflkjashdflk jdhflkajs android:text=a;sdjklfhas djhfaosjdhf asjkhdf lakjsdhf lajksdhf laksjdfhlaksjdhfalksjdfhlaksjdfhaksdjfhalskdjhflaksjdhfalkjsdhf lakjsdhf alksjdhf laksjfdhlaksjdfhakls;jdhf lakjsdfj asdlkjf aljksdhf lkajshdfkjasdhfklajsdhflaksjdhf laksjdhf lkajsdhf laksjdhfkjahsdflkjashdflk jdhflkajshfliksdj hfkajsdhfgaouiweytgaeuhgiafhgdsgfh a</string>
     <string name="know_your_bmi">KNOW YOUR BMI</string>
@@ -28,6 +28,13 @@
     <string name="passage2">Create design your logo for free using an easy logo maker tool. Click on the design you like and start making a logo with our diy logo maker. Logogarden also offers professional logo design services for those who prefer to work with a graphic designer. Use our online logo creator in order to create hundreds of unique logos instantly no technical skills are required. The free logo maker. Tailor brands logo maker is trusted by over 1 million small businesses.</string>
     <string name="healthy_tips">Healthy Tips</string>
     <string name="diet_workout_yoga">Diet . workout . yoga</string>
+
+
+    <string name="banner_ad_unit_id">ca-app-pub-4406614365903315/4201103966</string>
+    <string name="BMIbanner_ad_unit_id">ca-app-pub-4406614365903315/3248250416</string>
+    <string name="diet_app">Diet app</string>
+    <string name="burn_your_qurantine_fat">burn your qurantine fat</string>
+    <string name="ravi_anand_veludandi">- Ravi Anand Veludandi</string>
 
 
 </resources>

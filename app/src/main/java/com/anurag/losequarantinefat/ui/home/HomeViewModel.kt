@@ -1,7 +1,9 @@
 package com.anurag.losequarantinefat.ui.home
 
 import android.content.Context
+import android.os.Build
 import android.util.Log
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -10,6 +12,8 @@ import com.anurag.losequarantinefat.localstorage.StorageSP
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.InputStream
+import java.text.SimpleDateFormat
+import java.util.*
 import kotlin.random.Random
 
 class HomeViewModel : ViewModel() {
@@ -25,21 +29,28 @@ class HomeViewModel : ViewModel() {
     }
     val title_text: LiveData<String> = title
 
+    private val _quote = MutableLiveData<String>().apply {
+        val data = listOf<String>("hai","hello")
+        data.shuffled()
+        value = data[0]
+    }
+    val quote: LiveData<String> = _quote
+
 
     private val breakfast_data = MutableLiveData<JSONObject>()
     val breakfast_dataL: LiveData<JSONObject> = breakfast_data
 
-    fun funnction(context: Context?) {
+
+    fun Newdata(context: Context?) {
         val menulocal = context?.let { MenuLocal(it) }
-
-//        menulocal!!.savedate("asd")
-
-        val inputscrem: InputStream? = context?.assets?.open("breakfast.json")
+        Log.d(TAG, menulocal!!.getDate().toString())
+        val inputscrem: InputStream? = context.assets?.open("breakfast.json")
         val jsonfile = inputscrem?.bufferedReader().use { it?.readText() }
         val jsonData = JSONArray(jsonfile).getJSONObject(Random.nextInt(0, 6))
         Log.i("anurag", "${jsonData}")
         breakfast_data.value = jsonData
-        menulocal!!.saveMenu(jsonData.getString("breakfast_item").toString(),
+        menulocal.saveMenu(
+            jsonData.getString("breakfast_item").toString(),
             jsonData.getString("breakfast_details").toString(),
 
             jsonData.getString("afternoon_item").toString(),
@@ -49,30 +60,36 @@ class HomeViewModel : ViewModel() {
             jsonData.getString("evening_details").toString(),
 
             jsonData.getString("dinner_item").toString(),
-            jsonData.getString("dinner_details").toString())
-    }
+            jsonData.getString("dinner_details").toString(),
 
-    fun funnction2(context: Context?) {
+            jsonData.getString("breakfast_photo_url").toString(),
+            jsonData.getString("afternoon_photo_url").toString(),
+            jsonData.getString("evening_photo_url").toString(),
+            jsonData.getString("dinner_photo_url").toString(),
+
+            jsonData.getString("breakfast_calories").toString(),
+            jsonData.getString("afternoon_calories").toString(),
+            jsonData.getString("evening_calories").toString(),
+            jsonData.getString("dinner_calories").toString(),
+
+            jsonData.getString("breakfast_cal_deatails").toString(),
+            jsonData.getString("afternoon_cal_details").toString(),
+            jsonData.getString("evening_cal_details").toString(),
+            jsonData.getString("dinner_cal_details").toString()
+        )
+        val date = SimpleDateFormat("yyyy-MM-dd").format(getDaysAgo(0))
+        menulocal!!.savedate(date)
+    }
+    private val _menuLocal = MutableLiveData<Array<String?>>()
+    val menuLocal: LiveData<Array<String?>> = _menuLocal
+
+    fun applyingData(context: Context?) {
         val menulocal = context?.let { MenuLocal(it) }
 
         val x = menulocal!!.getTodayMenu()
-        for (i in 0..x.size-1) Log.d(TAG,"${x[i]}")
-//        val inputscrem: InputStream? = context?.assets?.open("breakfast.json")
-//        val jsonfile = inputscrem?.bufferedReader().use { it?.readText() }
-//        var jsonData = JSONArray(jsonfile).getJSONObject(Random.nextInt(0, 6))
-//        Log.i("anurag", "${jsonData}")
-//        breakfast_data.value = jsonData
-//        menulocal.saveMenu(jsonData.getString("breakfast_item").toString(),
-//            jsonData.getString("breakfast_details").toString(),
-//
-//            jsonData.getString("afternoon_item").toString(),
-//            jsonData.getString("afternoon_details").toString(),
-//
-//            jsonData.getString("evening_item").toString(),
-//            jsonData.getString("evening_details").toString(),
-//
-//            jsonData.getString("dinner_item").toString(),
-//            jsonData.getString("dinner_details").toString())
+        for (i in 8..11) Log.d(TAG,"${x[i]}")
+        _menuLocal.value = x
+
     }
 
 
@@ -84,6 +101,12 @@ class HomeViewModel : ViewModel() {
         BMIsaved.value = storageSP!!.getBMI().toString()
         Log.d(TAG, "${BMIsaved.value} asdasdasd")
         Log.d(TAG, "${storageSP.getBMI().toString()} asdasdasd")
+    }
+    fun getDaysAgo(daysAgo: Int): Date {
+        val calendar = Calendar.getInstance()
+        calendar.add(Calendar.DAY_OF_YEAR, daysAgo)
+
+        return calendar.time
     }
 
 
