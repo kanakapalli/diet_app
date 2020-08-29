@@ -1,6 +1,5 @@
 package com.anurag.losequarantinefat
 
-import android.content.ClipData
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
@@ -23,7 +22,6 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.messaging.FirebaseMessaging
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 import com.anurag.losequarantinefat.localstorage.StorageSP as StorageSP
 const val TOPIC = "/topics/Anurag"
@@ -47,17 +45,17 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val fab: FloatingActionButton = findViewById(R.id.fab)
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
+//        val fab: FloatingActionButton = findViewById(R.id.fab)
+//        fab.setOnClickListener { view ->
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                    .setAction("Action", null).show()
+//        }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        appBarConfiguration = AppBarConfiguration(setOf(R.id.nav_home, R.id.nav_tips, R.id.nav_Workout,R.id.nav_Aboutus), drawerLayout)
+        appBarConfiguration = AppBarConfiguration(setOf(R.id.nav_home, R.id.nav_tips, R.id.nav_Bmi,R.id.nav_Aboutus), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 

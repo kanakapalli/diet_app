@@ -102,6 +102,7 @@
                     <TextView
                         android:id="@+id/one"
                         style="@style/matter"
+                        android:layout_marginTop="8dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.498"
                         app:layout_constraintStart_toStartOf="parent"
@@ -147,6 +148,7 @@
                             android:layout_height="150dp"
                             android:layout_marginBottom="15dp"
                             android:scaleType="fitXY"
+                            android:background="@drawable/buffer"
                             android:src="@drawable/food" />
 
                         <TextView
@@ -191,6 +193,7 @@
                     <TextView
                         android:id="@+id/lunch_iteam"
                         style="@style/matter"
+                        android:layout_marginTop="8dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.498"
                         app:layout_constraintStart_toStartOf="parent"
@@ -234,6 +237,7 @@
                             android:layout_height="150dp"
                             android:layout_marginBottom="15dp"
                             android:scaleType="fitXY"
+                            android:background="@drawable/buffer"
                             android:src="@drawable/food" />
 
                         <TextView
@@ -276,6 +280,7 @@
                     <TextView
                         android:id="@+id/evening_item"
                         style="@style/matter"
+                        android:layout_marginTop="8dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.498"
                         app:layout_constraintStart_toStartOf="parent"
@@ -319,6 +324,7 @@
                             android:layout_height="150dp"
                             android:layout_marginBottom="15dp"
                             android:scaleType="fitXY"
+                            android:background="@drawable/buffer"
                             android:src="@drawable/food" />
 
                         <TextView
@@ -364,7 +370,7 @@
                         android:id="@+id/dinner_item"
                         style="@style/matter"
 
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="8dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
@@ -409,6 +415,7 @@
                             android:layout_marginBottom="15dp"
                             android:layout_marginTop="8dp"
                             android:scaleType="fitXY"
+                            android:background="@drawable/buffer"
                             android:src="@drawable/food" />
 
                         <TextView
@@ -426,6 +433,7 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
+                android:id="@+id/Quote"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"

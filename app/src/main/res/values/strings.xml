@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lose Quarantine Fat</string>
+    <string name="app_name">Healthy Splash</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Login </string>
@@ -20,12 +20,12 @@
     <string name="lunch">Lunch</string>
     <string name="eveningsnacks">Evening snacks</string>
     <string name="dinner">Dinner</string>
-    <string name="view_derails">view derails</string>
+    <string name="view_derails">view details</string>
     <string name="passage">a;sdjklfhas djhfaosjdhf asjkhdf lakjsdhf lajksdhf laksjdfhlaksjdhfalksjdfhlaksjdfhaksdjfhalskdjhflaksjdhfalkjsdhf lakjsdhf alksjdhf laksjfdhlaksjdfhakls;jdhf lakjsdfj asdlkjf aljksdhf lkajshdfkjasdhfklajsdhflaksjdhf laksjdhf lkajsdhf laksjdhfkjahsdflkjashdflk jdhflkajs android:text=a;sdjklfhas djhfaosjdhf asjkhdf lakjsdhf lajksdhf laksjdfhlaksjdhfalksjdfhlaksjdfhaksdjfhalskdjhflaksjdhfalkjsdhf lakjsdhf alksjdhf laksjfdhlaksjdfhakls;jdhf lakjsdfj asdlkjf aljksdhf lkajshdfkjasdhfklajsdhflaksjdhf laksjdhf lkajsdhf laksjdhfkjahsdflkjashdflk jdhflkajshfliksdj hfkajsdhfgaouiweytgaeuhgiafhgdsgfh a</string>
     <string name="know_your_bmi">KNOW YOUR BMI</string>
     <string name="healthy_bmi_18_5_kg_m_25_kg_m">Healthy BMI: 18.5 kg/m²-25 kg/m²</string>
     <string name="check_your_bmi">Check your BMI</string>
-    <string name="passage2">Create design your logo for free using an easy logo maker tool. Click on the design you like and start making a logo with our diy logo maker. Logogarden also offers professional logo design services for those who prefer to work with a graphic designer. Use our online logo creator in order to create hundreds of unique logos instantly no technical skills are required. The free logo maker. Tailor brands logo maker is trusted by over 1 million small businesses.</string>
+    <string name="passage2">Kanakapalli Anurag is an Andriod developer who graduated from the Kakatiya institute of technology. developed this app in MVVM architecture, using Kotlin. Created this app to help people who are gaining fat in this quarantine.</string>
     <string name="healthy_tips">Healthy Tips</string>
     <string name="diet_workout_yoga">Diet . workout . yoga</string>
 
@@ -35,6 +35,12 @@
     <string name="diet_app">Diet app</string>
     <string name="burn_your_qurantine_fat">burn your qurantine fat</string>
     <string name="ravi_anand_veludandi">- Ravi Anand Veludandi</string>
+    <string name="ravi_anand_veludandi_about">Ravi Anand Veludandi is from Warangal Urban, the second smartest city after Hyderabad in the Telangana state, India. He became the youngest IELTS, PTE and GMAT trainer in the city at an early age of 22.\n
+
+Taught and brought up with the value of education and the elements that it held, Anand explored a lot of perspectives of it and has certifications and few diplomas from Harvard, MIT, University of California, Boston University, University of Birmingham, University of Toronto, Emory university, University of Texas system, Pennsylvania school of medicine, Amnesty International, Cambridge language assessment, British Council, Berklee college of music, Microsoft, Alison courses and few more in the fields of poetry, academic writing, functions of the human anatomy, physical education, entrepreneurship, art and music.
+Anand has an experience of more than 10 years in the fitness industry.</string>
+    <string name="m_ruth_evangeline">M.Ruth evangeline</string>
+    <string name="ruthmatter">Going through many contemporary social media posts, urban Indian articles appears to be that most of the people are blessed with extra pounds of fat around their bellies, face, thighs, etc... The endless munching gives rise to weight gain Not everyone can afford expert nutritionist/dietitian to prepare a diet plan and I am one of them. This thing gave me the idea of losing these extra pounds of quarantine fat by developing an app for free to many. Mindless eating is the worst because you are consuming way too many calories without paying much attention. If you are working from home then you may be lost your daily routine, and also noticed that your eating habits have gone for a toss. This application diet plan is prepared with the help of many nutritionists, dietitians, and me</string>
 
 
 </resources>

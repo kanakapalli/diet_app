@@ -3,6 +3,7 @@ package com.anurag.losequarantinefat.ui.home
 import android.content.Context
 import android.os.Build
 import android.util.Log
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -14,6 +15,7 @@ import org.json.JSONObject
 import java.io.InputStream
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.coroutines.coroutineContext
 import kotlin.random.Random
 
 class HomeViewModel : ViewModel() {
@@ -24,15 +26,17 @@ class HomeViewModel : ViewModel() {
     val text: LiveData<String> = _text
 
 
+
+
     private val title = MutableLiveData<String>().apply {
-        value = "QFAT"
+        value = "Healthy Splash"
     }
     val title_text: LiveData<String> = title
 
     private val _quote = MutableLiveData<String>().apply {
-        val data = listOf<String>("hai","hello")
-        data.shuffled()
-        value = data[0]
+        val data = listOf<String>("HUSTLE and DEPLOY,","Evolve stronger.","LET YOUR JOURNEY EVOLVE LET IT TAKE TIME:\n LET IT FRAME ITSELF LET IT BE.","Fitness is legal so go do it.","Few blessings take to evolve","Its's always worth trying to get stronger.","Let excuses be the pedals to move on and excel.","Always dive into good things that you crave for","Destiny will prevail in its time,\n Just stick to the journey you though to make","EVOLVE STRONGER","Get stronger and fit each day")
+        Log.d(TAG,"${data.size},,,,,")
+        value = data[Random.nextInt(0, data.size)]
     }
     val quote: LiveData<String> = _quote
 
@@ -78,7 +82,7 @@ class HomeViewModel : ViewModel() {
             jsonData.getString("dinner_cal_details").toString()
         )
         val date = SimpleDateFormat("yyyy-MM-dd").format(getDaysAgo(0))
-        menulocal!!.savedate(date)
+        menulocal.savedate(date)
     }
     private val _menuLocal = MutableLiveData<Array<String?>>()
     val menuLocal: LiveData<Array<String?>> = _menuLocal

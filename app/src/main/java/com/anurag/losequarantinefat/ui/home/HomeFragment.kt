@@ -1,5 +1,6 @@
 package com.anurag.losequarantinefat.ui.home
 
+import android.app.Application
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -15,9 +16,12 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.androiddevs.firebasenotifications.NotificationData
 import com.androiddevs.firebasenotifications.PushNotification
 import com.anurag.losequarantinefat.R
+import com.anurag.losequarantinefat.common.Common
 import com.anurag.losequarantinefat.firebase.TOPIC
 import com.anurag.losequarantinefat.firebase.sendNotification
 import com.anurag.losequarantinefat.firebase.testnot
@@ -61,15 +65,10 @@ class HomeFragment : Fragment() {
 
         Log.d(TAG, "==============$BB , $LL ,$SS ,$DD==============")
         menuData!!.getTodayMenu()[9]?.let { Log.d(TAG, it) }
-        if (!sharedPreferences!!.getfalse()) {
-            PushNotification(
-                NotificationData("Welcome", "if you like this app please gives us 5 star"), TOPIC
-            ).also {
-                sendNotification(it)
-            }
-            sharedPreferences.changeTOFalse(true)
-        }
-        Toast.makeText(context, "===$BB , $LL ,$SS ,$DD===", Toast.LENGTH_SHORT).show()
+//        if (!sharedPreferences!!.getfalse()) {
+////
+//            sharedPreferences.changeTOFalse(true)
+//        }
         val BMI = sharedPreferences!!.getBMI()
         if (BMI.isNullOrEmpty()) Log.d(TAG, "$BMI this is bmi")
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
@@ -77,10 +76,11 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val textView: TextView = root.findViewById(R.id.textView)
         val title: TextView = root.findViewById(R.id.text_home)
+        val Quote: TextView = root.findViewById(R.id.Quote)
 
         val mAdView = root.findViewById<AdView>(R.id.adView)
 
-        Googleads(mAdView)
+        Common(requireContext()).Googleads(mAdView)
 //        RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("1018020B301508C2D31969EA9E8738C7")
         var number = 0
         val button2: Button = root.findViewById(R.id.button2)
@@ -128,7 +128,7 @@ class HomeFragment : Fragment() {
             homeViewModel.applyingData(context)
 
         }
-
+var bla :String? = null
         homeViewModel.BMIget(context)
 
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
@@ -136,6 +136,10 @@ class HomeFragment : Fragment() {
         })
         homeViewModel.title_text.observe(viewLifecycleOwner, Observer {
             title.text = it
+        })
+        homeViewModel.quote.observe(viewLifecycleOwner, Observer {
+            Quote.text = it
+            bla = it
         })
 
         homeViewModel.BMIsavedL.observe(viewLifecycleOwner, Observer {
@@ -161,7 +165,7 @@ class HomeFragment : Fragment() {
             if (!af_img.isNullOrEmpty()) Picasso.get().load(af_img).fit().into(Lunch_img)
 
             evening_item.text = it?.getString("evening_item").toString()
-            evening_detail_tv.text = it?.getString("evening_item").toString()
+            evening_detail_tv.text = it?.getString("evening_details").toString()
             Snack_cal.text = it?.getString("evening_calories").toString()
             SS = it?.getString("evening_cal_details").toString()
             val sk_img = it?.getString("evening_photo_url").toString()
@@ -178,13 +182,13 @@ class HomeFragment : Fragment() {
         })
 
         homeViewModel.menuLocal.observe(viewLifecycleOwner, Observer {
-            one.text = it[0]
+            one.text = it[0]?.toUpperCase(Locale.ROOT)
             breakfast_matter.text = it[1]
-            lunch_iteam.text = it[2]
+            lunch_iteam.text = it[2]?.toUpperCase(Locale.ROOT)
             lunch_detail_tv.text = it[3]
-            evening_item.text = it[4]
+            evening_item.text = it[4]?.toUpperCase(Locale.ROOT)
             evening_detail_tv.text = it[5]
-            dinner_item.text = it[6]
+            dinner_item.text = it[6]?.toUpperCase(Locale.ROOT)
             dinner_detail_tv.text = it[7]
 
             Picasso.get().load(it[8]).fit().into(Breakfast_img)
@@ -205,23 +209,14 @@ class HomeFragment : Fragment() {
         })
 
         BMIcard.setOnClickListener {
-            homeViewModel.Newdata(context)
-            number += 1
-            if (number == 10) {
-                Toast.makeText(context, "you found a easter egg", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(context, testnot::class.java))
-            }
+            findNavController().navigate(R.id.nav_Bmi)
+
         }
         imageView2.setOnClickListener {
-            Toast.makeText(
-                context,
-                "with easter egg #2 u can send mgs to all user of app",
-                Toast.LENGTH_SHORT
-            ).show()
             PushNotification(
                 NotificationData(
-                    "Easter egg #1",
-                    "There are many easter eggs u can noe find #2"
+                    "Hey yoy!",
+                    "${bla}"
                 ), TOPIC
             ).also {
                 sendNotification(it)
@@ -259,62 +254,6 @@ class HomeFragment : Fragment() {
         return root
     }
 
-    private fun Googleads(adView: AdView) {
-        val adRequest = AdRequest.Builder().build()
-        adView.loadAd(adRequest)
-        val applicationContext = context
-        adView.adListener = object : AdListener() {
-            override fun onAdFailedToLoad(p0: Int) {
-                super.onAdFailedToLoad(p0)
-                val toastMessage: String = "ad fail to load"
-
-                Toast.makeText(applicationContext, toastMessage.toString(), Toast.LENGTH_LONG)
-                    .show()
-            }
-
-            override fun onAdLoaded() {
-                super.onAdLoaded()
-                val toastMessage: String = "ad loaded"
-                Toast.makeText(applicationContext, toastMessage.toString(), Toast.LENGTH_LONG)
-                    .show()
-            }
-
-            override fun onAdOpened() {
-                super.onAdOpened()
-                val toastMessage: String = "ad is open"
-                Toast.makeText(applicationContext, toastMessage.toString(), Toast.LENGTH_LONG)
-                    .show()
-            }
-
-            override fun onAdClicked() {
-                super.onAdClicked()
-                val toastMessage: String = "ad is clicked"
-                Toast.makeText(applicationContext, toastMessage.toString(), Toast.LENGTH_LONG)
-                    .show()
-            }
-
-            override fun onAdClosed() {
-                super.onAdClosed()
-                val toastMessage: String = "ad is closed"
-                Toast.makeText(applicationContext, toastMessage.toString(), Toast.LENGTH_LONG)
-                    .show()
-            }
-
-            override fun onAdImpression() {
-                super.onAdImpression()
-                val toastMessage: String = "ad impression"
-                Toast.makeText(applicationContext, toastMessage.toString(), Toast.LENGTH_LONG)
-                    .show()
-            }
-
-            override fun onAdLeftApplication() {
-                super.onAdLeftApplication()
-                val toastMessage: String = "ad left application"
-                Toast.makeText(applicationContext, toastMessage.toString(), Toast.LENGTH_LONG)
-                    .show()
-            }
-        }
-    }
 
     override fun onPause() {
         if (adView != null) {
